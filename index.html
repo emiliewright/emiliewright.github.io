@@ -15,24 +15,88 @@
       background: #000;
       color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      height: 100vh;
+    }
+
+    .container {
+      min-height: 100vh;
+      padding: 60px 40px;
       display: flex;
-      align-items: center;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    header {
+      max-width: 1200px;
+      margin: 0 auto;
+      animation: fadeIn 1.2s ease forwards;
     }
 
     h1 {
-      font-size: clamp(3rem, 10vw, 9rem);
+      font-size: clamp(3.5rem, 10vw, 10rem);
       font-weight: 900;
-      letter-spacing: -0.04em;
+      letter-spacing: -0.05em;
       text-transform: uppercase;
       margin: 0;
-      text-align: center;
+      line-height: 0.95;
+    }
+
+    .subtitle {
+      margin-top: 20px;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #888;
+    }
+
+    footer {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #777;
+    }
+
+    footer a {
+      color: #777;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
 
 <body>
-  <h1>Emilie Wright</h1>
+  <div class="container">
+    <header>
+      <h1>Emilie<br />Wright</h1>
+      <div class="subtitle">Portfolio</div>
+    </header>
+
+    <footer>
+      <div>© 2025</div>
+      <div>
+        <a href="#">Instagram</a>
+        <a href="#">Email</a>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>
