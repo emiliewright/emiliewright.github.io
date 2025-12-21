@@ -6,73 +6,91 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-  body, html {
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  body {
     margin: 0;
     background: #000;
     color: #fff;
     font-family: sans-serif;
   }
 
-  a, a:visited, a:hover, a:active {
-    color: white;
-    text-decoration: none;
-  }
-
+  /* Top navigation */
   .top-link {
     position: fixed;
     top: 20px;
     font-weight: 600;
     font-size: 1rem;
+    color: white;
+    text-decoration: none;
     z-index: 10;
   }
 
   .left { left: 20px; }
   .right { right: 20px; }
 
-  .top-link:hover { opacity: 0.7; }
+  .top-link:hover {
+    opacity: 0.7;
+  }
 
-  .hero {
+  /* Fullscreen image sections */
+  .image-container {
     height: 100vh;
-    background: url('../images/work2.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: flex-end;
-    padding: 40px;
+    width: 100vw;
+    scroll-snap-align: start;
+    position: relative;
+    overflow: hidden;
   }
 
-  h1 {
-    font-size: clamp(3rem, 6vw, 6rem);
-    font-weight: 900;
-    margin: 0;
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
   }
 
-  .content {
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 0 20px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    opacity: 0.9;
+  /* Optional hover caption */
+  .caption {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
+
+  .image-container:hover .caption {
+    opacity: 1;
+  }
+
 </style>
 </head>
-
 <body>
 
+<!-- Navigation -->
 <a class="top-link left" href="../portfolio.html">Projects</a>
 <a class="top-link right" href="../contact.html">Contact</a>
 
-<section class="hero">
-  <h1>fever dream</h1>
+<!-- Images -->
+<section class="image-container">
+  <img src="../images/fever1.jpg" alt="Fever Dream 1">
+  <div class="caption">Fever Dream</div>
 </section>
 
-<section class="content">
-  <p>
+<section class="image-container">
+  <img src="../images/fever2.jpg" alt="Fever Dream 2">
+</section>
 
-  </p>
+<section class="image-container">
+  <img src="../images/fever3.jpg" alt="Fever Dream 3">
+</section>
 
-  <p>
-   
-  </p>
+<section class="image-container">
+  <img src="../images/fever4.jpg" alt="Fever Dream 4">
 </section>
 
 </body>
