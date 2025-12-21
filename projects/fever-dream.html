@@ -2,105 +2,75 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Fever Dream — Emilie Wright</title>
+<title>Poem of Ecstasy — Emilie Wright</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
   html {
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
 
-body {
-  margin: 0;
-  background: #000;
-  color: #fff;
-  font-family: sans-serif;
-}
+  body {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+  }
 
-/* force white links */
-a, a:visited, a:hover, a:active {
-  color: white;
-  text-decoration: none;
-}
-
-/* navigation */
-.top-link {
-  position: fixed;
-  top: 16px;
-  font-weight: 600;
-  font-size: 1rem;
-  z-index: 10;
-}
-
-.left { left: 16px; }
-.right { right: 16px; }
-
-.top-link:hover { opacity: 0.7; }
-
-/* full-screen sections */
-.section {
-  height: 100vh;
-  width: 100vw;
-  position: relative;
-  scroll-snap-align: start;
-  overflow: hidden;
-}
-
-.section img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* text overlay */
-.text {
-  position: absolute;
-  bottom: 32px;
-  left: 32px;
-  right: 32px;
-  max-width: 640px;
-  font-size: 1.2rem;
-  line-height: 1.5;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-/* desktop hover */
-.section:hover .text {
-  opacity: 0.9;
-}
-
-/* title */
-.title {
-  font-size: clamp(3rem, 6vw, 6rem);
-  font-weight: 900;
-}
-
-/* 📱 MOBILE OPTIMISATION */
-@media (max-width: 768px) {
+  a, a:visited, a:hover, a:active {
+    color: white;
+    text-decoration: none;
+  }
 
   .top-link {
-    font-size: 0.95rem;
+    position: fixed;
+    top: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    z-index: 10;
+  }
+
+  .left { left: 20px; }
+  .right { right: 20px; }
+
+  .top-link:hover {
+    opacity: 0.7;
+  }
+
+  .section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
+  }
+
+  .section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .text {
-    font-size: 1rem;
-    bottom: 24px;
-    left: 24px;
-    right: 24px;
-    opacity: 0.85;   /* always visible on mobile */
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 0.4s ease;
   }
 
   .section:hover .text {
-    opacity: 0.85;   /* disable hover reliance */
+    opacity: 0.9;
   }
 
   .title {
-    font-size: clamp(2.2rem, 8vw, 3.5rem);
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 900;
   }
-}
-
 </style>
 </head>
 
@@ -109,20 +79,30 @@ a, a:visited, a:hover, a:active {
 <a class="top-link left" href="../portfolio.html">Projects</a>
 <a class="top-link right" href="../contact.html">Contact</a>
 
-<section class="hero">
-  <h1>fever dream</h1>
+<section class="section">
+  <img src="../images/work3.jpg" alt="Poem of Ecstasy">
+  <div class="text title">poem of ecstasy</div>
 </section>
 
-<section class="content">
-  <p>
-    Fever Dream unfolds through fragmentation and repetition,
-    evoking altered states of perception and memory.
-  </p>
+<section class="section">
+  <img src="../images/work3-2.jpg" alt="">
+  <div class="text">
+    A meditation on transcendence and rhythmic surrender.
+  </div>
+</section>
 
-  <p>
-    The work blurs the boundary between reality and hallucination,
-    inviting a slow, immersive gaze.
-  </p>
+<section class="section">
+  <img src="../images/work3-3.jpg" alt="">
+  <div class="text">
+    Movement dissolves form, inviting an ecstatic state of attention.
+  </div>
+</section>
+
+<section class="section">
+  <img src="../images/work3-4.jpg" alt="">
+  <div class="text">
+    Body, sound, and time collapse into a single durational experience.
+  </div>
 </section>
 
 </body>
