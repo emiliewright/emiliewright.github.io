@@ -20,16 +20,16 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
+    padding: 40px 20px; /* more padding around page */
     font-size: 0.95rem;
-    line-height: 1.6;
+    line-height: 1.6; /* slightly more spacing between lines */
     opacity: 0.85;
   }
 
   a {
     color: white;
     text-decoration: none;
-    font-weight: 400; /* normal weight */
+    font-weight: 600;
     transition: opacity 0.3s;
   }
 
@@ -41,24 +41,33 @@
   .top-link {
     position: fixed;
     top: 20px;
-    left: 20px;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 0.95rem;
     color: white;
     text-decoration: none;
   }
 
-  .top-link:hover {
-    opacity: 0.7;
+  .left { left: 20px; }
+  .right { right: 20px; }
+
+  /* Uniform small size with extra spacing */
+  h1 {
+    font-weight: 900;
+    font-size: 0.95rem;
+    margin: 20px 0 30px 0; /* more space above and below */
+    line-height: 1.6;
   }
 
-  /* Uniform small size text */
-  h1, .acknowledgment, p {
+  .acknowledgment {
     font-size: 0.95rem;
-    font-weight: 400; /* no bold */
-    margin: 20px 0 30px 0;
+    margin: 20px 0 30px 0; /* spacing between sections */
     line-height: 1.6;
     max-width: 650px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin: 20px 0 0 0;
   }
 </style>
 </head>
