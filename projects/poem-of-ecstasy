@@ -1,1 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Poem of Ecstasy — Emilie Wright</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+  body, html {
+    margin: 0;
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+  }
+
+  .hero {
+    height: 100vh;
+    background: url('../images/work1.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
+  }
+
+  h1 {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 900;
+    margin: 0;
+  }
+
+  .content {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+  }
+
+  .nav {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: white;
+    z-index: 10;
+  }
+
+  .nav:hover {
+    opacity: 0.7;
+  }
+</style>
+</head>
+
+<body>
+
+<a class="nav" href="../portfolio.html">Home</a>
+
+<section class="hero">
+  <h1>Poem of Ecstasy</h1>
+</section>
+
+<section class="content">
+  <p>
+    A visual exploration of movement, form, and emotional intensity.
+    This project examines the intersection between stillness and
+    transcendence through image and space.
+  </p>
+
+  <p>
+    The work draws inspiration from music, ritual, and the body —
+    allowing the viewer to enter a meditative, immersive state.
+  </p>
+</section>
+
+</body>
+</html>
 
