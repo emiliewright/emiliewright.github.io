@@ -7,124 +7,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      background: #f4f6fb;
-      color: #222;
-      line-height: 1.6;
+      background: #000;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    header {
-      background: linear-gradient(120deg, #667eea, #764ba2);
-      color: white;
-      padding: 80px 20px;
+    h1 {
+      font-size: clamp(3rem, 10vw, 9rem);
+      font-weight: 900;
+      letter-spacing: -0.04em;
+      text-transform: uppercase;
+      margin: 0;
       text-align: center;
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 10px;
-    }
-
-    header p {
-      font-size: 1.2rem;
-      opacity: 0.9;
-    }
-
-    nav {
-      margin-top: 25px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 600;
-    }
-
-    section {
-      max-width: 1000px;
-      margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-    }
-
-    .card {
-      background: white;
-      padding: 30px;
-      border-radius: 16px;
-      box-shadow: 0 15px 40px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-    }
-
-    footer {
-      background: #111;
-      color: #aaa;
-      text-align: center;
-      padding: 30px 20px;
-      margin-top: 80px;
-    }
-
-    footer a {
-      color: #aaa;
-      text-decoration: none;
     }
   </style>
 </head>
 
 <body>
-
-<header>
-  <h1>Emilie Wright ✨</h1>
-  <p>Clean · Modern · Free Website</p>
-
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-  </nav>
-</header>
-
-<section>
-  <div class="grid">
-    <div class="card">
-      <h2>✨ About This Site</h2>
-      <p>
-        This website is hosted for free on GitHub Pages and built with simple,
-        clean HTML and CSS.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>🚀 What You Can Do</h2>
-      <p>
-        Use this site as a portfolio, personal page, or business landing page.
-        Add images, pages, and a custom domain.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>📩 Get in Touch</h2>
-      <p>
-        Add your contact info or connect a free contact form.
-      </p>
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>© 2025 Emilie Wright · Built with GitHub Pages</p>
-</footer>
-
+  <h1>Emilie Wright</h1>
 </body>
 </html>
-
