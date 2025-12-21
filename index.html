@@ -18,25 +18,42 @@
     overflow: hidden;
   }
 
-  /* Full-screen hero */
+  /* Full-screen hero container */
   .hero {
     height: 100vh;
     width: 100vw;
-    background: url('images/work1.jpg') center/cover no-repeat;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column; /* stack words vertically */
+    flex-direction: column;
     text-align: center;
   }
 
-  /* Hero text */
+  /* Background images stacked */
+  .hero img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+    left: 0;
+    display: none; /* hidden by default */
+  }
+
+  .hero img.active {
+    display: block; /* show current image */
+  }
+
+  /* Hero text — stacked, bold */
   .hero-text {
-    font-size: clamp(8rem, 15vw, 14rem); /* very large */
+    position: relative;
+    z-index: 10;
+    font-size: clamp(8rem, 15vw, 14rem);
+    font-weight: 900;
     line-height: 1;
-    cursor: pointer;
     text-transform: uppercase;
-    font-weight: 900; /* both bold */
+    cursor: pointer;
   }
 
   /* Home link top-left */
@@ -60,12 +77,26 @@
 <a class="top-link" href="index.html">Home</a>
 
 <div class="hero">
-  <div class="hero-text" onclick="enterPortfolio()">
-    EMILIE<br>WRIGHT
-  </div>
+  <!-- Background images -->
+  <img src="images/work1.jpg" class="active" alt="Work 1">
+  <img src="images/work2.jpg" alt="Work 2">
+  <img src="images/work3.jpg" alt="Work 3">
+
+  <!-- Stacked hero text -->
+  <div class="hero-text" onclick="enterPortfolio()">EMILIE<br>WRIGHT</div>
 </div>
 
 <script>
+  const slides = document.querySelectorAll('.hero img');
+  let current = 0;
+
+  // Cycle images every .5 seconds (2000ms)
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 500);
+
   function enterPortfolio() {
     window.location.href = 'portfolio.html';
   }
