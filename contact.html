@@ -26,17 +26,15 @@
     box-sizing: border-box;
   }
 
-  a:hover {
-    opacity: 0.7;
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+    transition: opacity 0.3s;
   }
 
-  a,
-a:visited,
-a:hover,
-a:active {
-  color: white;
-  text-decoration: none;
-}
+  a:hover {
+    opacity: 0.7;
   }
 
   /* Home link top-left */
@@ -53,9 +51,9 @@ a:active {
     opacity: 0.7;
   }
 
-  /* First line — nowrap, scroll if needed */
+  /* First line — nowrap */
   h1 {
-    font-size: clamp(0.9rem, 2vw, 0.95rem); /* scales on small screens */
+    font-size: clamp(0.9rem, 2vw, 0.95rem);
     white-space: nowrap;
     overflow-x: auto;
     text-align: center;
@@ -63,14 +61,14 @@ a:active {
     font-weight: 400;
   }
 
-  /* Second line (acknowledgment) — wrap naturally */
+  /* Second line — exactly two lines */
   .acknowledgment {
     font-size: 0.95rem;
     font-weight: 400;
-    max-width: 700px; /* wrap nicely into two lines */
-    margin: 20px 0;
+    max-width: 680px; /* adjust width so it wraps into two lines */
     line-height: 1.6;
     text-align: center;
+    margin: 20px 0;
   }
 
   p {
@@ -80,19 +78,23 @@ a:active {
     text-align: center;
   }
 
+  /* Make responsive for very small screens */
+  @media (max-width: 550px) {
+    .acknowledgment {
+      max-width: 90%; /* reduce width slightly */
+    }
+  }
+
 </style>
 </head>
 <body>
 
-<!-- Home link -->
 <a class="top-link" href="index.html">Home</a>
 
-<!-- First line: single unbroken line -->
 <h1>Emilie Wright. Born 1982. Lives and works on Wurundjeri and Bunorung Country in Naarm/Melbourne, Australia.</h1>
 
-<!-- Second line: wrap acknowledgment -->
 <div class="acknowledgment">
-  I acknowledge and pay my respects to the Traditional Custodians of the East Kulin Nations, on whose lands and waters I live and practice, and remember that sovereignty was never ceded.
+  I acknowledge and pay my respects to the Traditional Custodians of the East Kulin Nations, on whose lands and waters I live and practice.
 </div>
 
 <p>Contact: <a href="mailto:emiliejwright@gmail.com">emiliejwright@gmail.com</a></p>
