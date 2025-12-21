@@ -17,19 +17,18 @@
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px;
     font-size: 0.95rem;
     line-height: 1.6;
-    opacity: 0.85;
+    padding: 40px 20px;
+    box-sizing: border-box;
   }
 
   a {
     color: white;
     text-decoration: none;
-    font-weight: 400; /* normal weight */
+    font-weight: 400;
     transition: opacity 0.3s;
   }
 
@@ -37,14 +36,13 @@
     opacity: 0.7;
   }
 
-  /* Top navigation */
+  /* Top-left Home link */
   .top-link {
     position: fixed;
     top: 20px;
     left: 20px;
-    font-weight: 400;
-    font-size: 0.95rem;
-    color: white;
+    font-weight: 600;
+    font-size: 1rem;
     text-decoration: none;
   }
 
@@ -52,14 +50,26 @@
     opacity: 0.7;
   }
 
-  /* Uniform small size text */
-  h1, .acknowledgment, p {
-    font-size: 0.95rem;
-    font-weight: 400; /* no bold */
+  /* First line — single line, responsive */
+  h1 {
+    font-size: clamp(0.8rem, 2vw, 0.95rem); /* scales on small screens */
+    white-space: nowrap; /* prevents wrapping */
+    font-weight: 400;
     margin: 20px 0 30px 0;
     line-height: 1.6;
+    max-width: 100%;
+    text-align: center;
+    overflow-x: auto; /* optional: horizontal scroll if viewport too narrow */
+  }
+
+  /* Other text */
+  .acknowledgment, p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 20px 0 30px 0;
     max-width: 650px;
   }
+
 </style>
 </head>
 <body>
