@@ -6,71 +6,112 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-  body, html {
+  html {
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+  }
+
+  body {
     margin: 0;
     background: #000;
     color: #fff;
     font-family: sans-serif;
   }
 
-  .hero {
-    height: 100vh;
-    background: url('../images/work3.jpg') center/cover no-repeat;
-    display: flex;
-    align-items: flex-end;
-    padding: 40px;
+  /* force white links */
+  a, a:visited, a:hover, a:active {
+    color: white;
+    text-decoration: none;
   }
 
-  h1 {
-    font-size: clamp(3rem, 6vw, 6rem);
-    font-weight: 900;
-    margin: 0;
-  }
-
-  .content {
-    max-width: 900px;
-    margin: 80px auto;
-    padding: 0 20px;
-    font-size: 1.1rem;
-    line-height: 1.6;
-    opacity: 0.9;
-  }
-
-  .nav {
+  /* nav */
+  .top-link {
     position: fixed;
     top: 20px;
-    left: 20px;
     font-weight: 600;
-    text-decoration: none;
-    color: white;
+    font-size: 1rem;
     z-index: 10;
   }
 
-  .nav:hover {
-    opacity: 0.7;
+  .left { left: 20px; }
+  .right { right: 20px; }
+
+  .top-link:hover { opacity: 0.7; }
+
+  /* full-screen sections */
+  .section {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    scroll-snap-align: start;
+    overflow: hidden;
+  }
+
+  .section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* hover text */
+  .text {
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+    max-width: 600px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+
+  .section:hover .text {
+    opacity: 0.9;
+  }
+
+  /* title treatment */
+  .title {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 900;
   }
 </style>
 </head>
 
 <body>
 
-<a class="nav" href="../portfolio.html">Home</a>
+<!-- navigation -->
+<a class="top-link left" href="../portfolio.html">Projects</a>
+<a class="top-link right" href="../contact.html">Contact</a>
 
-<section class="hero">
-  <h1>Poem of Ecstasy</h1>
+<!-- SECTION 1 : TITLE IMAGE -->
+<section class="section">
+  <img src="../images/work3.jpg" alt="Poem of Ecstasy">
+  <div class="text title">poem of ecstasy</div>
 </section>
 
-<section class="content">
-  <p>
-    The moment of encounter is suspended in liminal flux, between what we are ceasing to be and what we are in the process of becoming: a sovereign body, a body of fluid, a body enmeshed, a body in wreckage, an open wound, gently healing and regenerating. Existing between exquisite pain and constant dull ache, between agony and ecstasy.
-  </p>
+<!-- SECTION 2 -->
+<section class="section">
+  <img src="../images/work3-2.jpg" alt="">
+  <div class="text">
+    A meditation on transcendence and rhythmic surrender.
+  </div>
+</section>
 
-  <p>
-    Poem of Ecstasy (Procession) is part of a project exploring themes of sadomasochism, catharsis and internal cosmology through architectures and psychoacoustics within experimental forms of field recording, vocals, audio signal processing and low frequency sound waves.
+<!-- SECTION 3 -->
+<section class="section">
+  <img src="../images/work3-3.jpg" alt="">
+  <div class="text">
+    Movement dissolves form, inviting an ecstatic state of attention.
+  </div>
+</section>
 
-  </p>
+<!-- SECTION 4 -->
+<section class="section">
+  <img src="../images/work3-4.jpg" alt="">
+  <div class="text">
+    Body, sound, and time collapse into a single durational experience.
+  </div>
 </section>
 
 </body>
 </html>
-
