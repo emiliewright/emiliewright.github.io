@@ -1,109 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Emilie Wright</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-      background: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    /* HERO */
-    .hero {
-      position: fixed;
-      inset: 0;
-      background-image: url('images/work1.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      transition: opacity 1s ease;
-      z-index: 10;
-    }
-
-    .hero::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.6);
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 1;
-    }
-
-    h1 {
-      font-size: clamp(3.5rem, 10vw, 10rem);
-      font-weight: 900;
-      letter-spacing: -0.05em;
-      text-transform: uppercase;
-      line-height: 0.95;
-      cursor: pointer;
-    }
-
-    /* PORTFOLIO */
-    .portfolio {
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-
-    .image {
-      height: 100vh;          /* Full viewport height */
-      width: 100vw;           /* Full viewport width */
-      background-size: cover;
-      background-position: center;
-      scroll-snap-align: start;
-    }
-
-    /* Add smooth scrolling and snap */
-    html {
-      scroll-behavior: smooth;
-      scroll-snap-type: y mandatory;
-    }
-
-    body {
-      scroll-snap-type: y mandatory;
-    }
-  </style>
+<meta charset="UTF-8">
+<title>Emilie Wright</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body, html { margin: 0; height: 100%; font-family: sans-serif; overflow: hidden; }
+  .hero {
+    background: url('images/work1.jpg') center/cover no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+  }
+  h1 {
+    color: white;
+    font-size: clamp(3.5rem, 10vw, 10rem);
+    font-weight: 900;
+    text-align: center;
+    z-index: 1;
+    cursor: pointer;
+  }
+</style>
 </head>
-
 <body>
-
-<!-- HERO -->
-<div class="hero" id="hero">
-  <div class="hero-content">
-    <h1 onclick="enterSite()">Emilie<br>Wright</h1>
+  <div class="hero">
+    <h1 onclick="enterPortfolio()">Emilie<br>Wright</h1>
   </div>
-</div>
-
-<!-- PORTFOLIO -->
-<div class="portfolio" id="portfolio">
-  <div class="image" style="background-image: url('images/work1.jpg');"></div>
-  <div class="image" style="background-image: url('images/work2.jpg');"></div>
-  <div class="image" style="background-image: url('images/work3.jpg');"></div>
-</div>
 
 <script>
-  function enterSite() {
-    document.getElementById('hero').style.opacity = '0';
-    document.getElementById('portfolio').style.opacity = '1';
-    document.body.style.overflow = 'auto';
-    setTimeout(() => {
-      document.getElementById('hero').style.display = 'none';
-    }, 1000);
-  }
+function enterPortfolio() {
+  window.location.href = 'portfolio.html';
+}
 </script>
-
 </body>
 </html>
