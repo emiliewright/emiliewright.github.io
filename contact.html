@@ -20,9 +20,9 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 20px;
-    font-size: 0.95rem; /* uniform small size */
-    line-height: 1.5;
+    padding: 40px 20px; /* more padding around page */
+    font-size: 0.95rem;
+    line-height: 1.6; /* slightly more spacing between lines */
     opacity: 0.85;
   }
 
@@ -50,14 +50,24 @@
   .left { left: 20px; }
   .right { right: 20px; }
 
-  /* Uniform small size for all text */
-  .acknowledgment, .personal-info, h1, p {
+  /* Uniform small size with extra spacing */
+  h1 {
+    font-weight: 900;
     font-size: 0.95rem;
-    margin: 10px 0;
+    margin: 20px 0 30px 0; /* more space above and below */
+    line-height: 1.6;
   }
 
-  h1 {
-    font-weight: 900; /* bold for hierarchy */
+  .acknowledgment {
+    font-size: 0.95rem;
+    margin: 20px 0 30px 0; /* spacing between sections */
+    line-height: 1.6;
+    max-width: 650px;
+  }
+
+  p {
+    font-size: 0.95rem;
+    margin: 20px 0 0 0;
   }
 </style>
 </head>
@@ -66,22 +76,14 @@
 <!-- Home link on left -->
 <a class="top-link left" href="index.html">Home</a>
 
-  <h1>Emilie Wright. Born 1982. Lives and works on Bunorung Country in Naarm/Melbourne, Australia. 
-    
-</div>
+<h1>Emilie Wright. Born 1982. Lives and works on Wurundjeri and Bunorung Country in Naarm/Melbourne, Australia.</h1>
 
-
-  <!-- Formal Acknowledgment of Country -->
+<!-- Formal Acknowledgment of Country -->
 <div class="acknowledgment">
-  
-  I acknowledge the Traditional Custodians, the Wurundjeri Woi-wurrung and Bunorung / Boon Wurrung peoples of the East Kulin Nation, on whose lands and waters I live and practice.
-
+  I acknowledge and pay my respects to the Traditional Custodians of the East Kulin Nations, on whose lands and waters I live and practice, and remember that sovereignty was never ceded.
 </div>
 
-    
-<p>
-  
-  Contact: <a href="mailto:emiliejwright@gmail.com">emiliejwright@gmail.com</a></p>
+<p>Contact: <a href="mailto:emiliejwright@gmail.com">emiliejwright@gmail.com</a></p>
 
 </body>
 </html>
