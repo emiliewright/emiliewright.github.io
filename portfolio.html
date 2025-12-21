@@ -4,9 +4,19 @@
 <meta charset="UTF-8">
 <title>Portfolio - Emilie Wright</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-  html { scroll-behavior: smooth; scroll-snap-type: y mandatory; }
-  body { margin: 0; font-family: sans-serif; background: #000; color: #fff; }
+  html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
+  body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #000;
+    color: #fff;
+  }
 
   /* Full-screen portfolio images */
   .image-container {
@@ -16,11 +26,11 @@
     scroll-snap-align: start;
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
   }
 
   .image-container:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
   }
 
   .image-container img {
@@ -28,18 +38,14 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: opacity 0.5s ease;
   }
 
   /* Caption overlay */
   .caption {
     position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background: rgba(0,0,0,0.6);
-    padding: 12px 16px;
-    border-radius: 6px;
-    font-size: 1.5rem;
+    bottom: 24px;
+    left: 24px;
+    font-size: 1.4rem;
     font-weight: 600;
     opacity: 0;
     transition: opacity 0.5s ease;
@@ -49,7 +55,7 @@
     opacity: 1;
   }
 
-  /* Top-left / top-right buttons */
+  /* Navigation (same style everywhere) */
   .top-link {
     position: fixed;
     top: 20px;
@@ -59,41 +65,39 @@
     text-decoration: none;
     color: white;
     cursor: pointer;
-    padding: 0;
+  }
+
+  .top-link:hover {
+    opacity: 0.7;
   }
 
   .menu { left: 20px; }
   .contact { right: 20px; }
-
-  .top-link:hover { opacity: 0.7; }
 </style>
 </head>
+
 <body>
 
-<!-- Fixed navigation -->
+<!-- Navigation -->
 <a class="top-link menu" href="index.html">Home</a>
 <a class="top-link contact" href="contact.html">Contact</a>
 
-<!-- Portfolio images -->
-<a href="projects/project1.html" class="image-container">
-  <img src="images/work1.jpg" alt="Project 1">
-  <div class="caption">body/score</div>
+<!-- Projects -->
+
+<a href="projects/body-score.html" class="image-container">
+  <img src="images/work1.jpg" alt="Body / Score">
+  <div class="caption">body / score</div>
 </a>
 
-<a href="projects/project2.html" class="image-container">
-  <img src="images/work2.jpg" alt="Project 2">
+<a href="projects/fever-dream.html" class="image-container">
+  <img src="images/work2.jpg" alt="Fever Dream">
   <div class="caption">fever dream</div>
 </a>
 
-<a href="projects/project3.html" class="image-container">
-  <img src="images/work3.jpg" alt="Project 3">
+<a href="projects/poem-of-ecstasy.html" class="image-container">
+  <img src="images/work3.jpg" alt="Poem of Ecstasy">
   <div class="caption">poem of ecstasy</div>
 </a>
-<a href="projects/poem-of-ecstasy.html" class="image-container">
-  <img src="images/work1.jpg" alt="Poem of Ecstasy">
-  <div class="caption">body/score</div>
-</a>
-  
 
 </body>
 </html>
