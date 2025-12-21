@@ -54,14 +54,15 @@
   line-height: 1;
   text-transform: uppercase;
   cursor: pointer;
-  color: #fff;
-  transition: opacity 0.5s ease;
-  mix-blend-mode: difference; /* blends text with background for luxury fade */
+  color: #fff; /* default white */
+  transition: color 0.5s ease, opacity 0.5s ease;
 }
 
 .hero-text:hover {
-  opacity: 0.2; /* fades text into background dynamically */
+  color: #000; /* fade to black (background) */
+  opacity: 0.5; /* optional subtle fade */
 }
+
 
   }
 </style>
