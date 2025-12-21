@@ -2,16 +2,11 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Poem of Ecstasy — Emilie Wright</title>
+<title>Fever Dream — Emilie Wright</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-  html {
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
-  }
-
-  body {
+  body, html {
     margin: 0;
     background: #000;
     color: #fff;
@@ -34,42 +29,29 @@
   .left { left: 20px; }
   .right { right: 20px; }
 
-  .top-link:hover {
-    opacity: 0.7;
-  }
+  .top-link:hover { opacity: 0.7; }
 
-  .section {
+  .hero {
     height: 100vh;
-    width: 100vw;
-    position: relative;
-    scroll-snap-align: start;
-    overflow: hidden;
+    background: url('../images/work2.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 40px;
   }
 
-  .section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .text {
-    position: absolute;
-    bottom: 40px;
-    left: 40px;
-    max-width: 600px;
-    font-size: 1.2rem;
-    line-height: 1.5;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  .section:hover .text {
-    opacity: 0.9;
-  }
-
-  .title {
+  h1 {
     font-size: clamp(3rem, 6vw, 6rem);
     font-weight: 900;
+    margin: 0;
+  }
+
+  .content {
+    max-width: 900px;
+    margin: 80px auto;
+    padding: 0 20px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    opacity: 0.9;
   }
 </style>
 </head>
@@ -79,32 +61,19 @@
 <a class="top-link left" href="../portfolio.html">Projects</a>
 <a class="top-link right" href="../contact.html">Contact</a>
 
-<section class="section">
-  <img src="../images/work3.jpg" alt="Poem of Ecstasy">
-  <div class="text title">poem of ecstasy</div>
+<section class="hero">
+  <h1>fever dream</h1>
 </section>
 
-<section class="section">
-  <img src="../images/work3-2.jpg" alt="">
-  <div class="text">
-    A meditation on transcendence and rhythmic surrender.
-  </div>
-</section>
+<section class="content">
+  <p>
 
-<section class="section">
-  <img src="../images/work3-3.jpg" alt="">
-  <div class="text">
-    Movement dissolves form, inviting an ecstatic state of attention.
-  </div>
-</section>
+  </p>
 
-<section class="section">
-  <img src="../images/work3-4.jpg" alt="">
-  <div class="text">
-    Body, sound, and time collapse into a single durational experience.
-  </div>
+  <p>
+   
+  </p>
 </section>
 
 </body>
 </html>
-
