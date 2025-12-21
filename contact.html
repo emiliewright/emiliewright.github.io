@@ -8,10 +8,12 @@
   html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
+    width: 100%;
     background: #000;
     color: #fff;
     font-family: sans-serif;
-    height: 100%;
+    overflow: hidden; /* prevents scrolling */
   }
 
   body {
@@ -20,16 +22,15 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    padding: 40px 20px; /* more padding around page */
     font-size: 0.95rem;
-    line-height: 1.6; /* slightly more spacing between lines */
+    line-height: 1.6;
     opacity: 0.85;
   }
 
   a {
     color: white;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 400; /* normal text */
     transition: opacity 0.3s;
   }
 
@@ -37,37 +38,11 @@
     opacity: 0.7;
   }
 
-  /* Top navigation */
-  .top-link {
-    position: fixed;
-    top: 20px;
-    font-weight: 600;
+  h1, .acknowledgment, p {
     font-size: 0.95rem;
-    color: white;
-    text-decoration: none;
-  }
-
-  .left { left: 20px; }
-  .right { right: 20px; }
-
-  /* Uniform small size with extra spacing */
-  h1 {
     font-weight: 400;
-    font-size: 0.95rem;
-    margin: 20px 0 30px 0; /* more space above and below */
-    line-height: 1.6;
-  }
-
-  .acknowledgment {
-    font-size: 0.95rem;
-    margin: 20px 0 30px 0; /* spacing between sections */
-    line-height: 1.6;
+    margin: 10px 0; /* reduced margins to prevent scroll */
     max-width: 650px;
-  }
-
-  p {
-    font-size: 0.95rem;
-    margin: 20px 0 0 0;
   }
 </style>
 </head>
