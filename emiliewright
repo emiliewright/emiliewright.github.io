@@ -1,11 +1,77 @@
 index.html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>emiliewright>
+  <meta charset="UTF-8">
+  <title>My Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fa;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 30px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #111;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello!</h1>
-  <p>My website is live.</p>
+
+<header>
+  <h1>My Website</h1>
+  <p>Simple. Fast. Free.</p>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section>
+  <div class="card">
+    <h2>Welcome</h2>
+    <p>This is a free website hosted on GitHub Pages with a custom domain.</p>
+  </div>
+
+  <div class="card">
+    <h2>What I Do</h2>
+    <p>Add your services, portfolio, or personal info here.</p>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 My Website</p>
+</footer>
+
 </body>
-</html>        
+</html>
