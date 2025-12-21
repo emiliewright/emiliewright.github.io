@@ -5,41 +5,98 @@
 <title>Emilie Wright</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body, html { margin: 0; height: 100%; font-family: sans-serif; overflow: hidden; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    background: #000;
+    color: #fff;
+  }
+
+  body {
+    overflow: hidden;
+  }
+
+  /* Full-screen hero */
   .hero {
-    background: url('images/work1.jpg') center/cover no-repeat;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    width: 100vw;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .hero::before {
-    content: '';
+
+  /* Images stacked */
+  .hero img {
     position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.6);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
   }
-  h1 {
-    color: white;
-    font-size: clamp(3.5rem, 10vw, 10rem);
+
+  .hero img.active {
+    opacity: 1;
+  }
+
+  /* Landing text */
+  .hero-text {
+    position: relative;
+    z-index: 10;
+    font-size: clamp(3rem, 6vw, 6rem);
     font-weight: 900;
+    color: #fff;
     text-align: center;
-    z-index: 1;
     cursor: pointer;
+    text-transform: uppercase;
+  }
+
+  /* Optional top-left navigation */
+  .top-link {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .top-link:hover {
+    opacity: 0.7;
   }
 </style>
 </head>
 <body>
-  <div class="hero">
-    <h1 onclick="enterPortfolio()">Emilie<br>Wright</h1>
-  </div>
+
+<a class="top-link" href="index.html">Home</a>
+
+<div class="hero">
+  <img src="images/work1.jpg" class="active" alt="Work 1">
+  <img src="images/work2.jpg" alt="Work 2">
+  <img src="images/work3.jpg" alt="Work 3">
+  <div class="hero-text" onclick="enterPortfolio()">Emilie Wright</div>
+</div>
 
 <script>
-function enterPortfolio() {
-  window.location.href = 'portfolio.html';
-}
+  // Image cycling
+  const slides = document.querySelectorAll('.hero img');
+  let current = 0;
+
+  setInterval(() => {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }, 5000); // change every 5 seconds
+
+  // Click-to-enter function
+  function enterPortfolio() {
+    window.location.href = 'portfolio.html';
+  }
 </script>
+
 </body>
 </html>
