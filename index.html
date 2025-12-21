@@ -88,7 +88,7 @@
     slides[current].classList.remove('active');
     current = (current + 1) % slides.length;
     slides[current].classList.add('active'); // abrupt change
-  }, 750); // change every 1 seconds
+  }, 250); // change every .25 seconds
 
   function enterPortfolio() {
     window.location.href = 'portfolio.html';
