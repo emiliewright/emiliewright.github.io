@@ -17,19 +17,19 @@
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* vertical center */
+    align-items: center;     /* horizontal center */
     text-align: center;
-    padding: 40px 20px;
-    font-size: 0.95rem;
+    padding: 20px;
+    font-size: 0.95rem;      /* uniform text size */
     line-height: 1.6;
-    opacity: 0.85;
+    box-sizing: border-box;
   }
 
   a {
     color: white;
     text-decoration: none;
-    font-weight: 400; /* normal weight */
+    font-weight: 400;
     transition: opacity 0.3s;
   }
 
@@ -37,14 +37,13 @@
     opacity: 0.7;
   }
 
-  /* Top navigation */
+  /* Top-left Home link */
   .top-link {
     position: fixed;
     top: 20px;
     left: 20px;
-    font-weight: 400; /* normal weight */
+    font-weight: 400;
     font-size: 0.95rem;
-    color: white;
     text-decoration: none;
   }
 
@@ -52,18 +51,23 @@
     opacity: 0.7;
   }
 
-  /* Uniform small size text */
-  h1, .acknowledgment, .personal-info, p {
+  /* All text same size and normal weight */
+  h1, .acknowledgment, p {
     font-size: 0.95rem;
-    font-weight: 400; /* no bold */
-    margin: 20px 0 30px 0;
-    line-height: 1.6;
+    font-weight: 400;
+    margin: 10px 0 20px 0;
     max-width: 650px;
   }
+
+  /* Keep first line on a single line */
+  h1 {
+    white-space: nowrap;
+    overflow-x: auto; /* allows horizontal scroll if needed on tiny screens */
+  }
+
 </style>
 </head>
 <body>
-
 
 <!-- Home link -->
 <a class="top-link" href="index.html">Home</a>
@@ -71,10 +75,9 @@
 <!-- First line — single continuous sentence -->
 <h1>Emilie Wright. Born 1982. Lives and works on Wurundjeri and Bunorung Country in Naarm/Melbourne, Australia.</h1>
 
-
 <!-- Formal Acknowledgment of Country -->
 <div class="acknowledgment">
-  I acknowledge and pay my respects to the Traditional Custodians of the East Kulin Nations, on whose lands and waters I live and practice, and remember that sovereignty was never ceded.
+  I acknowledge and pay my respects to the Traditional Custodians of the Eastern Kulin Nations, on whose lands and waters I live and practice, and remember that sovereignty was never ceded.
 </div>
 
 <p>Contact: <a href="mailto:emiliejwright@gmail.com">emiliejwright@gmail.com</a></p>
