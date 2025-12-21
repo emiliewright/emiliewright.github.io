@@ -22,35 +22,21 @@
   .hero {
     height: 100vh;
     width: 100vw;
-    position: relative;
+    background: url('images/work1.jpg') center/cover no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  /* Images stacked */
-  .hero img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: none; /* hide by default */
-  }
-
-  .hero img.active {
-    display: block; /* show active image */
-  }
-
- /* Hero text */
-  .hero-text {
-    position: relative;
-    z-index: 10;
-    font-size: clamp(7rem, 15vw, 12rem); /* large bold */
-    font-weight: 900;
-    color: #fff;
+    flex-direction: column; /* stack words vertically */
     text-align: center;
+  }
+
+  /* Hero text */
+  .hero-text {
+    font-size: clamp(8rem, 15vw, 14rem); /* very large */
+    line-height: 1;
     cursor: pointer;
     text-transform: uppercase;
+    font-weight: 900; /* both bold */
   }
 
   /* Home link top-left */
@@ -74,22 +60,12 @@
 <a class="top-link" href="index.html">Home</a>
 
 <div class="hero">
-  <img src="images/work1.jpg" class="active" alt="Work 1">
-  <img src="images/work2.jpg" alt="Work 2">
-  <img src="images/work3.jpg" alt="Work 3">
-  <div class="hero-text" onclick="enterPortfolio()">Emilie Wright</div>
+  <div class="hero-text" onclick="enterPortfolio()">
+    EMILIE<br>WRIGHT
+  </div>
 </div>
 
 <script>
-  const slides = document.querySelectorAll('.hero img');
-  let current = 0;
-
-  setInterval(() => {
-    slides[current].classList.remove('active');
-    current = (current + 1) % slides.length;
-    slides[current].classList.add('active'); // abrupt change
-  }, 500); // change every .25 seconds
-
   function enterPortfolio() {
     window.location.href = 'portfolio.html';
   }
