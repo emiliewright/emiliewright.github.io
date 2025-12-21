@@ -37,7 +37,7 @@
     opacity: 0.7;
   }
 
-  /* Top-left Home link */
+  /* Home link top-left */
   .top-link {
     position: fixed;
     top: 20px;
@@ -51,27 +51,33 @@
     opacity: 0.7;
   }
 
-  /* All text same size */
-  h1, .acknowledgment, p {
-    font-size: 0.95rem;
-    font-weight: 400;
+  /* First line — nowrap, scroll if needed */
+  h1 {
+    font-size: clamp(0.9rem, 2vw, 0.95rem); /* scales on small screens */
+    white-space: nowrap;
+    overflow-x: auto;
+    text-align: center;
     margin: 10px 0 20px 0;
-    max-width: 100%;
+    font-weight: 400;
   }
 
-  /* First line — nowrap with horizontal scroll if needed */
-  h1 {
-    white-space: nowrap;
-    overflow-x: auto;      /* allows horizontal scroll */
+  /* Second line (acknowledgment) — wrap naturally */
+  .acknowledgment {
+    font-size: 0.95rem;
+    font-weight: 400;
+    max-width: 600px; /* wrap nicely into two lines */
+    margin: 20px 0;
+    line-height: 1.6;
     text-align: center;
   }
 
-  /* Optional: reduce font size on small screens */
-  @media (max-width: 500px) {
-    h1 {
-      font-size: 0.85rem;
-    }
+  p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    margin: 20px 0 0 0;
+    text-align: center;
   }
+
 </style>
 </head>
 <body>
@@ -79,12 +85,12 @@
 <!-- Home link -->
 <a class="top-link" href="index.html">Home</a>
 
-<!-- First line — single line -->
+<!-- First line: single unbroken line -->
 <h1>Emilie Wright. Born 1982. Lives and works on Wurundjeri and Bunorung Country in Naarm/Melbourne, Australia.</h1>
 
-<!-- Acknowledgment -->
+<!-- Second line: wrap acknowledgment -->
 <div class="acknowledgment">
-  I acknowledge and pay my respects to the Traditional Custodians of the Eastern Kulin Nations, on whose lands and waters I live and practice, and remember that sovereignty was never ceded.
+  I acknowledge and pay my respects to the Traditional Custodians of the East Kulin Nations, on whose lands and waters I live and practice, and remember that sovereignty was never ceded.
 </div>
 
 <p>Contact: <a href="mailto:emiliejwright@gmail.com">emiliejwright@gmail.com</a></p>
