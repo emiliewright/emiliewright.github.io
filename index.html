@@ -45,7 +45,7 @@
     display: block; /* show current image */
   }
 
-  /* Hero text — stacked, bold */
+  /* Hero text — stacked, bold, acts as button */
   .hero-text {
     position: relative;
     z-index: 10;
@@ -54,27 +54,15 @@
     line-height: 1;
     text-transform: uppercase;
     cursor: pointer;
+    transition: opacity 0.3s;
   }
 
-  /* Home link top-left */
-  .top-link {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-    font-weight: 600;
-    font-size: 1rem;
-    color: white;
-    text-decoration: none;
-  }
-
-  .top-link:hover {
-    opacity: 0.7;
+  .hero-text:hover {
+    opacity: 0.8;
   }
 </style>
 </head>
 <body>
-
-<a class="top-link" href="index.html">Home</a>
 
 <div class="hero">
   <!-- Background images -->
@@ -82,7 +70,7 @@
   <img src="images/work2.jpg" alt="Work 2">
   <img src="images/work3.jpg" alt="Work 3">
 
-  <!-- Stacked hero text -->
+  <!-- Stacked hero text as button -->
   <div class="hero-text" onclick="enterPortfolio()">EMILIE<br>WRIGHT</div>
 </div>
 
@@ -90,17 +78,11 @@
   const slides = document.querySelectorAll('.hero img');
   let current = 0;
 
-  // Cycle images every .5 seconds (2000ms)
+  // Cycle images every 2 seconds (2000ms) — abrupt transition
   setInterval(() => {
     slides[current].classList.remove('active');
     current = (current + 1) % slides.length;
     slides[current].classList.add('active');
   }, 500);
 
-  function enterPortfolio() {
-    window.location.href = 'portfolio.html';
-  }
-</script>
-
-</body>
-</html>
+  function enterPortf
