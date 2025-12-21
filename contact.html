@@ -21,25 +21,9 @@
     align-items: center;
     text-align: center;
     padding: 20px;
-  }
-
-  .acknowledgment {
-    font-size: 0.9rem;
-    margin-bottom: 40px;
-    opacity: 0.7;
-    max-width: 600px;
-    line-height: 1.4;
-  }
-
-  h1 {
-    font-size: clamp(2.5rem, 6vw, 4rem);
-    font-weight: 900;
-    margin: 0 0 20px 0;
-  }
-
-  p {
-    font-size: 1.1rem;
-    margin: 0 0 20px 0;
+    font-size: 0.95rem; /* uniform small size */
+    line-height: 1.5;
+    opacity: 0.85;
   }
 
   a {
@@ -59,13 +43,23 @@
     top: 20px;
     right: 20px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: white;
     text-decoration: none;
   }
 
   .top-link:hover {
     opacity: 0.7;
+  }
+
+  /* Uniform small size for all text */
+  .acknowledgment, .personal-info, h1, p {
+    font-size: 0.95rem;
+    margin: 10px 0;
+  }
+
+  h1 {
+    font-weight: 900; /* bold for hierarchy */
   }
 </style>
 </head>
@@ -74,9 +68,14 @@
 <!-- Top navigation -->
 <a class="top-link" href="index.html">Home</a>
 
-<!-- Acknowledgment of Country -->
+<!-- Formal Acknowledgment of Country -->
 <div class="acknowledgment">
   I acknowledge the Traditional Custodians, the Wurundjeri Woi-wurrung and Bunurong / Boon Wurrung peoples of the East Kulin Nation, on whose lands and waters I live and practice.
+</div>
+
+<!-- Personal statement -->
+<div class="personal-info">
+  Born 1982. Lives and works on Bunurong Country in Naarm/Melbourne, Australia. 
 </div>
 
 <h1>Contact Emilie Wright</h1>
