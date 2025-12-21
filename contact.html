@@ -17,18 +17,19 @@
   body {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 40px 20px;
     font-size: 0.95rem;
     line-height: 1.6;
-    padding: 40px 20px;
-    box-sizing: border-box;
+    opacity: 0.85;
   }
 
   a {
     color: white;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 400; /* normal weight */
     transition: opacity 0.3s;
   }
 
@@ -36,33 +37,36 @@
     opacity: 0.7;
   }
 
-  /* Top-left Home link */
+  /* Top navigation */
   .top-link {
     position: fixed;
     top: 20px;
     left: 20px;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 400;
+    font-size: 0.95rem;
+    color: white;
     text-decoration: none;
   }
 
+  .top-link:hover {
+    opacity: 0.7;
+  }
+
+  /* Uniform small size text */
   h1, .acknowledgment, p {
     font-size: 0.95rem;
-    font-weight: 400;
-    margin: 20px 0;
+    font-weight: 400; /* no bold */
+    margin: 20px 0 30px 0;
+    line-height: 1.6;
     max-width: 650px;
   }
-
-  .acknowledgment {
-    margin-bottom: 20px;
-  }
-
 </style>
 </head>
 <body>
 
-<!-- Home link top-left -->
+<!-- Home link -->
 <a class="top-link" href="index.html">Home</a>
+
 
 <p>Emilie Wright. Born 1982. Lives and works on Wurundjeri and Bunorung Country in Naarm/Melbourne, Australia.</p>
 
