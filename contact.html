@@ -5,14 +5,81 @@
 <title>Contact - Emilie Wright</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>
-  body { margin: 0; font-family: sans-serif; background: #000; color: #fff; display: flex; justify-content: center; align-items: center; height: 100vh; flex-direction: column; }
-  a { color: white; text-decoration: none; margin-top: 20px; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    color: #fff;
+    font-family: sans-serif;
+    height: 100%;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .info {
+    font-size: 1rem;
+    margin-bottom: 40px;
+    opacity: 0.8;
+  }
+
+  h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 900;
+    margin: 0 0 20px 0;
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin: 0 0 20px 0;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: opacity 0.3s;
+    margin-top: 20px;
+  }
+
+  a:hover {
+    opacity: 0.7;
+  }
+
+  /* Top-right navigation consistent with portfolio pages */
+  .top-link {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-weight: 600;
+    font-size: 1rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .top-link:hover {
+    opacity: 0.7;
+  }
 </style>
 </head>
 <body>
-  Born 1982. Lives and works on on Bunurong Country in Naarm/Melbourne, Australia.
-  <h1>Contact Emilie Wright</h1>
-  <p>Email: <a href="mailto:emiliejwright@gmail.com">emiliejwright@gmail.com</a></p>
-  <a href="index.html">Home</a>
+
+<!-- optional consistent nav -->
+<a class="top-link" href="index.html">Home</a>
+
+<div class="info">
+  Born 1982. Lives and works on Bunurong Country in Naarm/Melbourne, Australia.
+</div>
+
+<h1>Contact Emilie Wright</h1>
+
+<p>Email: <a href="mailto:emiliejwright@gmail.com">emiliejwright@gmail.com</a></p>
+
 </body>
 </html>
