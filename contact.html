@@ -26,10 +26,11 @@
     box-sizing: border-box;
   }
 
+  /* Portfolio-style links */
   a {
     color: white;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 600; /* match portfolio page */
     transition: opacity 0.3s;
   }
 
@@ -42,13 +43,7 @@
     position: fixed;
     top: 20px;
     left: 20px;
-    font-weight: 400;
-    font-size: 0.95rem;
-    text-decoration: none;
-  }
-
-  .top-link:hover {
-    opacity: 0.7;
+    font-size: 1rem;
   }
 
   /* First line — nowrap */
@@ -65,7 +60,7 @@
   .acknowledgment {
     font-size: 0.95rem;
     font-weight: 400;
-    max-width: 680px; /* adjust width so it wraps into two lines */
+    max-width: 520px; /* ensures two lines */
     line-height: 1.6;
     text-align: center;
     margin: 20px 0;
@@ -78,10 +73,10 @@
     text-align: center;
   }
 
-  /* Make responsive for very small screens */
+  /* Responsive for small screens */
   @media (max-width: 550px) {
     .acknowledgment {
-      max-width: 90%; /* reduce width slightly */
+      max-width: 90%;
     }
   }
 
@@ -89,10 +84,13 @@
 </head>
 <body>
 
+<!-- Home link styled like portfolio -->
 <a class="top-link" href="index.html">Home</a>
 
+<!-- First line — single line -->
 <h1>Emilie Wright. Born 1982. Lives and works on Wurundjeri and Bunorung Country in Naarm/Melbourne, Australia.</h1>
 
+<!-- Acknowledgment -->
 <div class="acknowledgment">
   I acknowledge and pay my respects to the Traditional Custodians of the East Kulin Nations, on whose lands and waters I live and practice.
 </div>
