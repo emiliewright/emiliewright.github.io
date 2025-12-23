@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,7 +18,6 @@
       font-family: sans-serif;
     }
 
-    /* ---------------- DESKTOP (UNCHANGED) ---------------- */
     body {
       overflow: hidden;
     }
@@ -63,22 +61,20 @@
       opacity: 0.8;
     }
 
-    /* ---------------- MOBILE COMPOSITION ---------------- */
     @media (max-width: 768px) {
-
       body {
         overflow: hidden;
       }
 
       .hero {
-        height: 100dvh;        /* mobile-safe viewport */
-        justify-content: center; /* perfect vertical centering */
+        height: 100dvh;
+        justify-content: center;
         padding: 0 5%;
       }
 
       .hero-text {
-        font-size: 18vw;       /* slightly larger for mobile */
-        line-height: 1.05;     /* balanced two-line spacing */
+        font-size: 18vw;
+        line-height: 1.05;
       }
     }
   </style>
@@ -94,7 +90,7 @@
     <img src="/images/work4.jpg" alt="Work 4">
 
     <!-- Hero text -->
-    <div class="hero-text" onclick="enterPortfolio()">
+    <div class="hero-text" onclick="enterProjects()">
       EMILIE<br>WRIGHT
     </div>
   </div>
@@ -110,8 +106,9 @@
       slides[current].classList.add('active');
     }, 500);
 
-    function enterPortfolio() {
-      window.location.href = 'portfolio.html';
+    // Redirect to Projects page
+    function enterProjects() {
+      window.location.href = 'projects/index.html';
     }
   </script>
 
