@@ -12,6 +12,7 @@
     color: #fff;
     font-family: sans-serif;
     height: 100%;
+    box-sizing: border-box;
   }
 
   body {
@@ -23,14 +24,14 @@
     padding: 20px;
     font-size: 0.95rem;
     line-height: 1.6;
-    box-sizing: border-box;
+    overflow: hidden; /* prevent scrolling */
   }
 
   /* Portfolio-style links */
   a {
     color: white;
     text-decoration: none;
-    font-weight: 600; /* match portfolio page */
+    font-weight: 600; 
     transition: opacity 0.3s;
   }
 
@@ -44,23 +45,23 @@
     top: 20px;
     left: 20px;
     font-size: 1rem;
+    z-index: 10;
   }
 
-  /* First line — nowrap */
+  /* First line — single line on desktop, wraps if needed on mobile */
   h1 {
     font-size: clamp(0.9rem, 2vw, 0.95rem);
-    white-space: nowrap;
-    overflow-x: auto;
     text-align: center;
     margin: 10px 0 20px 0;
     font-weight: 400;
+    white-space: normal; /* wrap instead of scrolling */
   }
 
-  /* Second line — exactly two lines */
+  /* Second line — acknowledgment */
   .acknowledgment {
     font-size: 0.95rem;
     font-weight: 400;
-    max-width: 700px; /* ensures two lines */
+    max-width: 700px;
     line-height: 1.6;
     text-align: center;
     margin: 20px 0;
@@ -73,21 +74,41 @@
     text-align: center;
   }
 
-  /* Responsive for small screens */
+  /* ---------------- MOBILE RESPONSIVENESS ---------------- */
   @media (max-width: 550px) {
+
+    body {
+      padding: 15px;
+    }
+
+    h1 {
+      font-size: 4.5vw; /* smaller to fit mobile screen, automatically wraps */
+    }
+
     .acknowledgment {
       max-width: 90%;
+      font-size: 4.5vw; /* scale to fit mobile width */
+      line-height: 1.4;
+    }
+
+    .top-link {
+      top: 15px;
+      left: 15px;
+      font-size: 0.95rem;
+    }
+
+    p {
+      font-size: 4.5vw; /* scale contact info to fit */
     }
   }
-
 </style>
 </head>
 <body>
 
-<!-- Home link styled like portfolio -->
+<!-- Home link -->
 <a class="top-link" href="index.html">Home</a>
 
-<!-- First line — single line -->
+<!-- First line -->
 <h1>Emilie Wright. Born 1982. Lives and works on Wurundjeri and Bunorung Country in Naarm/Melbourne, Australia.</h1>
 
 <!-- Acknowledgment -->
