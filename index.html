@@ -20,7 +20,7 @@
 
     /* ---------------- DESKTOP (UNCHANGED) ---------------- */
     body {
-      overflow: hidden; /* desktop full-screen */
+      overflow: hidden;
     }
 
     .hero {
@@ -66,19 +66,18 @@
     @media (max-width: 768px) {
 
       body {
-        overflow: hidden; /* no scroll on mobile */
+        overflow: hidden;
       }
 
       .hero {
-        height: 100dvh; /* mobile safe viewport */
-        justify-content: center;
+        height: 100dvh;        /* mobile-safe viewport */
+        justify-content: center; /* perfect vertical centering */
         padding: 0 5%;
       }
 
-      /* Stack the name more safely and scale to fit */
       .hero-text {
-        font-size: 12vw;   /* smaller text for mobile */
-        line-height: 1.1;
+        font-size: 18vw;       /* slightly larger for mobile */
+        line-height: 1.05;     /* balanced two-line spacing */
       }
     }
   </style>
@@ -103,7 +102,7 @@
     const slides = document.querySelectorAll('.hero img');
     let current = 0;
 
-    // Cycle images every 500ms (desktop and mobile)
+    // Cycle images every 500ms
     setInterval(() => {
       slides[current].classList.remove('active');
       current = (current + 1) % slides.length;
