@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Emilie Wright</title>
 
-  <!-- REQUIRED for mobile -->
+  <!-- Mobile responsiveness -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -21,14 +21,14 @@
       color: #fff;
     }
 
-    /* Allow mobile browsers to manage height correctly */
+    /* Desktop behaviour (unchanged) */
     body {
       overflow: hidden;
     }
 
     /* Full-screen hero container */
     .hero {
-      min-height: 100svh; /* mobile-safe viewport */
+      min-height: 100svh; /* mobile-safe viewport height */
       width: 100vw;
       position: relative;
       display: flex;
@@ -36,12 +36,6 @@
       align-items: center;
       flex-direction: column;
       text-align: center;
-
-      /* prevents top text clipping on phones */
-      padding: env(safe-area-inset-top)
-               env(safe-area-inset-right)
-               env(safe-area-inset-bottom)
-               env(safe-area-inset-left);
     }
 
     /* Background images stacked */
@@ -59,7 +53,7 @@
       display: block;
     }
 
-    /* Hero text — unchanged aesthetic */
+    /* Hero text — identical aesthetic */
     .hero-text {
       position: relative;
       z-index: 10;
@@ -76,10 +70,28 @@
       opacity: 0.8;
     }
 
-    /* Small-screen safety tweaks only */
-    @media (max-width: 600px) {
+    /* ---------------------------- */
+    /* Mobile-only responsiveness   */
+    /* ---------------------------- */
+
+    @media (max-width: 768px) {
+
+      /* Allow mobile browser resizing */
+      body {
+        overflow: auto;
+      }
+
+      /* Prevent clipping on notched phones */
+      .hero {
+        padding: env(safe-area-inset-top)
+                 env(safe-area-inset-right)
+                 env(safe-area-inset-bottom)
+                 env(safe-area-inset-left);
+      }
+
+      /* Safety line-height tweak */
       .hero-text {
-        line-height: 0.95; /* prevents accidental vertical clipping */
+        line-height: 0.95;
       }
     }
   </style>
@@ -94,7 +106,7 @@
     <img src="/images/work3.jpg" alt="Work 3">
     <img src="/images/work4.jpg" alt="Work 4">
 
-    <!-- Stacked hero text as button -->
+    <!-- Stacked hero text -->
     <div class="hero-text" onclick="enterPortfolio()">
       EMILIE<br>WRIGHT
     </div>
