@@ -4,94 +4,31 @@
 <meta charset="UTF-8">
 <title>Poem of Ecstasy — Emilie Wright</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<style>
-  html {
-    scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
-  }
-
-  body {
-    margin: 0;
-    background: #000;
-    color: #fff;
-    font-family: sans-serif;
-  }
-
-  /* Top navigation */
-  .top-link {
-    position: fixed;
-    top: 20px;
-    font-weight: 600;
-    font-size: 1rem;
-    color: white;
-    text-decoration: none;
-    z-index: 10;
-  }
-
-  .left { left: 20px; }
-  .right { right: 20px; }
-
-  .top-link:hover {
-    opacity: 0.7;
-  }
-
-  /* Fullscreen image sections */
-  .image-container {
-    height: 100vh;
-    width: 100vw;
-    scroll-snap-align: start;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-
-  /* Optional hover caption */
-  .caption {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
-    font-size: 1rem;
-    font-weight: 600;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-  }
-
-  .image-container:hover .caption {
-    opacity: 1;
-  }
-
-</style>
+<link rel="stylesheet" href="../style.css">
 </head>
-<body>
+<body class="projects-page">
 
 <!-- Navigation -->
-<a class="top-link left" href="../portfolio.html">Projects</a>
-<a class="top-link right" href="../contact.html">Contact</a>
+<a class="top-link menu" href="../projects.html">Projects</a>
+<a class="top-link contact" href="../contact.html">Contact</a>
 
-<!-- Images -->
-<section class="image-container">
+<!-- Full-screen images -->
+<a href="#" class="image-container">
   <img src="../images/poem1.jpg" alt="Poem of Ecstasy 1">
   <div class="caption">Poem of Ecstasy</div>
-</section>
+</a>
 
-<section class="image-container">
+<a href="#" class="image-container">
   <img src="../images/poem2.jpg" alt="Poem of Ecstasy 2">
-</section>
+</a>
 
-<section class="image-container">
+<a href="#" class="image-container">
   <img src="../images/poem3.jpg" alt="Poem of Ecstasy 3">
-</section>
+</a>
 
-<section class="image-container">
+<a href="#" class="image-container">
   <img src="../images/poem4.jpg" alt="Poem of Ecstasy 4">
-</section>
+</a>
 
 </body>
 </html>
