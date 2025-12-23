@@ -48,13 +48,13 @@
     z-index: 10;
   }
 
-  /* First line — single line on desktop, wraps if needed on mobile */
+  /* First line — desktop normal, wrap on mobile */
   h1 {
     font-size: clamp(0.9rem, 2vw, 0.95rem);
     text-align: center;
     margin: 10px 0 20px 0;
     font-weight: 400;
-    white-space: normal; /* wrap instead of scrolling */
+    white-space: normal; /* allow wrapping by default */
   }
 
   /* Second line — acknowledgment */
@@ -81,26 +81,32 @@
       padding: 15px;
     }
 
+    /* First line wraps, font scaled for mobile */
     h1 {
-      font-size: 4.5vw; /* smaller to fit mobile screen, automatically wraps */
+      font-size: 5vw;  /* scales to fit mobile width */
+      white-space: normal; /* force wrapping */
     }
 
+    /* Acknowledgment wraps naturally and fits screen */
     .acknowledgment {
       max-width: 90%;
-      font-size: 4.5vw; /* scale to fit mobile width */
+      font-size: 4.5vw;
       line-height: 1.4;
     }
 
+    /* Contact email */
+    p {
+      font-size: 4.5vw;
+    }
+
+    /* Home link smaller */
     .top-link {
       top: 15px;
       left: 15px;
       font-size: 0.95rem;
     }
-
-    p {
-      font-size: 4.5vw; /* scale contact info to fit */
-    }
   }
+
 </style>
 </head>
 <body>
