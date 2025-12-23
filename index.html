@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Emilie Wright</title>
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
@@ -14,27 +13,24 @@
     html, body {
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
       background: #000;
       color: #fff;
+      font-family: sans-serif;
     }
 
-    /* ---------------- DESKTOP ---------------- */
+    /* ---------- DESKTOP (UNCHANGED) ---------- */
 
     body {
-      overflow: hidden; /* keep desktop exactly as before */
+      overflow: hidden;
     }
-
-    /* ---------------- HERO ---------------- */
 
     .hero {
       width: 100vw;
-      height: 100vh; /* desktop behaviour */
+      height: 100vh;
       position: relative;
       display: flex;
-      justify-content: center;
       align-items: center;
-      flex-direction: column;
+      justify-content: center;
       text-align: center;
     }
 
@@ -62,26 +58,23 @@
       user-select: none;
     }
 
-    /* ---------------- MOBILE FIX ---------------- */
+    /* ---------- MOBILE (THE REAL FIX) ---------- */
 
     @media (max-width: 768px) {
 
-      /* Allow scrolling so content cannot be cropped */
       body {
-        overflow: auto;
+        overflow: hidden;
       }
 
-      /* Use REAL mobile viewport height */
       .hero {
-        height: auto;
-        min-height: 100dvh;
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        height: 100dvh;
+        padding: 0;
       }
 
-      /* Prevent top/bottom clipping */
+      /* SCALE BY HEIGHT SO IT NEVER CROPS */
       .hero-text {
-        line-height: 0.95;
+        font-size: 28vh;       /* THIS IS THE KEY */
+        line-height: 0.85;
       }
     }
   </style>
