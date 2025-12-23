@@ -18,10 +18,9 @@
       font-family: sans-serif;
     }
 
-    /* ---------- DESKTOP (UNCHANGED) ---------- */
-
+    /* ---------------- DESKTOP (UNCHANGED) ---------------- */
     body {
-      overflow: hidden;
+      overflow: hidden; /* desktop full-screen */
     }
 
     .hero {
@@ -29,8 +28,9 @@
       height: 100vh;
       position: relative;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
+      flex-direction: column;
       text-align: center;
     }
 
@@ -58,23 +58,27 @@
       user-select: none;
     }
 
-    /* ---------- MOBILE (THE REAL FIX) ---------- */
+    .hero-text:hover {
+      opacity: 0.8;
+    }
 
+    /* ---------------- MOBILE COMPOSITION ---------------- */
     @media (max-width: 768px) {
 
       body {
-        overflow: hidden;
+        overflow: hidden; /* no scroll on mobile */
       }
 
       .hero {
-        height: 100dvh;
-        padding: 0;
+        height: 100dvh; /* mobile safe viewport */
+        justify-content: center;
+        padding: 0 5%;
       }
 
-      /* SCALE BY HEIGHT SO IT NEVER CROPS */
+      /* Stack the name more safely and scale to fit */
       .hero-text {
-        font-size: 28vh;       /* THIS IS THE KEY */
-        line-height: 0.85;
+        font-size: 12vw;   /* smaller text for mobile */
+        line-height: 1.1;
       }
     }
   </style>
@@ -83,11 +87,13 @@
 <body>
 
   <div class="hero">
-    <img src="/images/work1.jpg" class="active" alt="">
-    <img src="/images/work2.jpg" alt="">
-    <img src="/images/work3.jpg" alt="">
-    <img src="/images/work4.jpg" alt="">
+    <!-- Background images -->
+    <img src="/images/work1.jpg" class="active" alt="Work 1">
+    <img src="/images/work2.jpg" alt="Work 2">
+    <img src="/images/work3.jpg" alt="Work 3">
+    <img src="/images/work4.jpg" alt="Work 4">
 
+    <!-- Hero text -->
     <div class="hero-text" onclick="enterPortfolio()">
       EMILIE<br>WRIGHT
     </div>
@@ -97,6 +103,7 @@
     const slides = document.querySelectorAll('.hero img');
     let current = 0;
 
+    // Cycle images every 500ms (desktop and mobile)
     setInterval(() => {
       slides[current].classList.remove('active');
       current = (current + 1) % slides.length;
