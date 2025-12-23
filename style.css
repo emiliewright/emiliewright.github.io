@@ -9,7 +9,8 @@ html, body {
   min-height: 100vh;
 }
 
-body {
+/* ---------- Body layouts ---------- */
+body.contact-page {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,6 +19,12 @@ body {
   padding: 20px;
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+body.projects-page {
+  display: block; /* normal scrolling for project images */
+  padding: 0;
+  font-size: 0.95rem;
 }
 
 /* ---------- Links / Navigation ---------- */
@@ -47,6 +54,10 @@ a:active {
 .projects,
 .contact { right: 20px; }
 
+.top-link.active {
+  text-decoration: underline; /* safe, only styles text */
+}
+
 /* ---------- Content ---------- */
 h1 {
   font-size: clamp(0.9rem, 2vw, 0.95rem);
@@ -69,9 +80,45 @@ p {
   margin: 20px 0 0 0;
 }
 
+/* ---------- Projects images ---------- */
+.image-container {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  scroll-snap-align: start;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.6s ease;
+}
+
+.image-container:hover {
+  transform: scale(1.02);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.caption {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.image-container:hover .caption {
+  opacity: 1;
+}
+
 /* ---------- Mobile ---------- */
 @media (max-width: 550px) {
-  body { padding: 15px; }
+  body.contact-page { padding: 15px; }
   h1 { font-size: 5vw; }
   .acknowledgment { max-width: 90%; font-size: 4.5vw; line-height: 1.4; }
   p { font-size: 4.5vw; }
