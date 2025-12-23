@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,11 +19,11 @@
       font-family: sans-serif;
     }
 
+    /* ---------------- DESKTOP (UNCHANGED) ---------------- */
     body {
       overflow: hidden;
     }
 
-    /* ---------------- HERO ---------------- */
     .hero {
       width: 100vw;
       height: 100vh;
@@ -62,17 +63,22 @@
       opacity: 0.8;
     }
 
-    /* ---------------- MOBILE ---------------- */
+    /* ---------------- MOBILE COMPOSITION ---------------- */
     @media (max-width: 768px) {
+
+      body {
+        overflow: hidden;
+      }
+
       .hero {
-        height: 100dvh;
-        justify-content: center;
+        height: 100dvh;        /* mobile-safe viewport */
+        justify-content: center; /* perfect vertical centering */
         padding: 0 5%;
       }
 
       .hero-text {
-        font-size: 18vw;
-        line-height: 1.05;
+        font-size: 18vw;       /* slightly larger for mobile */
+        line-height: 1.05;     /* balanced two-line spacing */
       }
     }
   </style>
@@ -88,7 +94,7 @@
     <img src="/images/work4.jpg" alt="Work 4">
 
     <!-- Hero text -->
-    <div class="hero-text" onclick="enterProjects()">
+    <div class="hero-text" onclick="enterPortfolio()">
       EMILIE<br>WRIGHT
     </div>
   </div>
@@ -97,16 +103,15 @@
     const slides = document.querySelectorAll('.hero img');
     let current = 0;
 
-    // Cycle images every 500ms (adjustable)
+    // Cycle images every 500ms
     setInterval(() => {
       slides[current].classList.remove('active');
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
     }, 500);
 
-    // Correct function to navigate to Projects page
-    function enterProjects() {
-      window.location.href = 'projects/index.html';
+    function enterPortfolio() {
+      window.location.href = 'portfolio.html';
     }
   </script>
 
