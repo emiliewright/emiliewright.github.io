@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <title>Contact - Emilie Wright</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
   html, body {
     margin: 0;
@@ -18,116 +19,59 @@
   body {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* vertical center */
-    align-items: center;     /* horizontal center */
+    justify-content: center;
+    align-items: center;
     text-align: center;
     padding: 20px;
     font-size: 0.95rem;
     line-height: 1.6;
-    overflow: hidden; /* prevent scrolling */
+    overflow: hidden;
   }
 
-  /* Portfolio-style links */
+  /* ---------------- LINKS / NAVIGATION ---------------- */
+
   a,
-a:visited,
-a:hover,
-a:active {
-  color: white;
-  text-decoration: none;
-}
+  a:visited,
+  a:hover,
+  a:active {
+    color: white;
+    text-decoration: none;
+  }
 
-.top-link {
-  position: fixed;
-  top: 20px;
-  z-index: 10;
-  font-weight: 600;
-  font-size: 1rem;
-  cursor: pointer;
-}
+  .top-link {
+    position: fixed;
+    top: 20px;
+    z-index: 10;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+  }
 
-.top-link:hover {
-  opacity: 0.7;
-}
+  .top-link:hover {
+    opacity: 0.7;
+  }
 
-.menu { left: 20px; }
-.projects { right: 20px; }
+  .menu { left: 20px; }
+  .projects { right: 20px; }
 
-  /* First line — desktop normal, wrap on mobile */
+  /* ---------------- CONTENT ---------------- */
+
   h1 {
     font-size: clamp(0.9rem, 2vw, 0.95rem);
-    text-align: center;
     margin: 10px 0 20px 0;
     font-weight: 400;
-    white-space: normal; /* allow wrapping by default */
+    white-space: normal;
   }
 
-  /* Second line — acknowledgment */
   .acknowledgment {
     font-size: 0.95rem;
     font-weight: 400;
     max-width: 700px;
     line-height: 1.6;
-    text-align: center;
     margin: 20px 0;
   }
 
   p {
     font-size: 0.95rem;
     font-weight: 400;
-    margin: 20px 0 0 0;
-    text-align: center;
-  }
-
-  /* ---------------- MOBILE RESPONSIVENESS ---------------- */
-  @media (max-width: 550px) {
-
-    body {
-      padding: 15px;
-    }
-
-    /* First line wraps, font scaled for mobile */
-    h1 {
-      font-size: 5vw;  /* scales to fit mobile width */
-      white-space: normal; /* force wrapping */
-    }
-
-    /* Acknowledgment wraps naturally and fits screen */
-    .acknowledgment {
-      max-width: 90%;
-      font-size: 4.5vw;
-      line-height: 1.4;
-    }
-
-    /* Contact email */
-    p {
-      font-size: 4.5vw;
-    }
-
-    /* Home link smaller */
-    .top-link {
-      top: 15px;
-      left: 15px;
-      font-size: 0.95rem;
-    }
-  }
-
-</style>
-</head>
-<body>
-
-<!-- Home link -->
-<a class="top-link menu" href="index.html">Home</a>
-<a class="top-link projects" href="projects.html">Projects</a>
-
-<!-- First line -->
-<h1>Emilie Wright. Born 1982. Lives and works on Wurundjeri and Bunorung Country in Naarm/Melbourne, Australia.</h1>
-
-<!-- Acknowledgment -->
-<div class="acknowledgment">
-  I acknowledge and pay my respects to the Traditional Custodians of the Eastern Kulin Nations, on whose lands and waters I live and practice, and remember that sovereignty was never ceded.
-</div>
-
-<p>Contact: <a href="mailto:emiliejwright@gmail.com">emiliejwright@gmail.com</a></p>
-
-</body>
-</html>
+    mar
