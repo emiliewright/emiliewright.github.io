@@ -55,7 +55,6 @@ a:active {
 .contact { right: 20px; }
 
 .top-link.active {
-  text-decoration: underline; /* safe, only styles text */
 }
 
 /* ---------- Content ---------- */
